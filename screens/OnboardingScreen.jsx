@@ -1,28 +1,30 @@
 import React from "react";
-import { Image, StyleSheet, Text } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import Onboarding from "react-native-onboarding-swiper";
 
 const OnboardingScreen = ({ navigation }) => {
   return (
     <Onboarding
+      onSkip={() => navigation.replace("Login")}
+      onDone={() => navigation.replace("Login")}
       pages={[
         {
           backgroundColor: "#a6e4d0",
           image: <Image source={require("../assets/onboarding-img1.png")} />,
-          title: "Onboarding One",
-          subtitle: "How Great Is Our God",
+          title: "Connect to the World",
+          subtitle: "A New Way To Connect With The World.",
         },
         {
           backgroundColor: "#fdeb93",
           image: <Image source={require("../assets/onboarding-img2.png")} />,
-          title: "Onboarding Two",
-          subtitle: "How Great Is Our God",
+          title: "Share Your Favorites",
+          subtitle: "Share Your Thoughts With Similar Kind of People.",
         },
         {
           backgroundColor: "#e9bcbe",
           image: <Image source={require("../assets/onboarding-img3.png")} />,
-          title: "Onboarding Three",
-          subtitle: "How Great Is Our God",
+          title: "Become The Star",
+          subtitle: "Let The Spot Light Capture You.",
         },
       ]}
     />
